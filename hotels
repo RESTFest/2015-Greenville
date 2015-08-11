@@ -1,0 +1,157 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.402931,
+          34.846349,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building",
+        "name": "Hampton Inn & Suites Greenville Hotel Downtown RiverPlace"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.401214,
+          34.848225,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Courtyard by Marriott Greenville Downtown",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.400203,
+          34.848887,
+          0
+        ]
+      },
+      "properties": {
+        "name": "The Westin Poinsett, Greenville",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.389324,
+          34.849904,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pettigru Place Bed & Breakfast",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.404957,
+          34.832098,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Budget Inn",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.356262,
+          34.855862,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Quality Inn Executive Center",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.400556,
+          34.836025,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ramada Inn",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.359601,
+          34.849314,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Phoenix Greenville's Inn",
+        "marker-color": "#d6a14a",
+        "marker-size": "medium",
+        "marker-symbol": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7cda42",
+        "marker-size": "medium",
+        "marker-symbol": "star",
+        "name": "Innovate Building"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.40336984395981,
+          34.846674482398164
+        ]
+      }
+    }
+  ]
+}
