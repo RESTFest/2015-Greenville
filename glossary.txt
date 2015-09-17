@@ -1,0 +1,35 @@
+planning -> bookings
+reconsiliation -> transitions
+
+Goal/State
+  need
+    preference
+      policy
+    requirement
+
+planning:
+  Advice
+    potential-transition(state1, state2)
+      option1
+      option2
+      option3
+
+  rank(risk(needs), fulfill(needs)) = match(option1, needs)
+  rank(risk(needs), fulfill(needs)) = match(option2, needs)
+  rank(risk(needs), fulfill(needs)) = match(option1, needs)
+  rank(risk(needs), fulfill(needs)) = match(option2, needs)
+
+  plan
+    booking1(option1)
+    booking2(option2)
+
+reconsiliation
+  executed-transition(booking)
+
+
+advice provider
+ranker
+planner
+reconsiler
+
+hyperdrive
