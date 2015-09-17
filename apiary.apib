@@ -1,0 +1,133 @@
+FORMAT: 1A
+
+# RESTChess
+
+# Group Home
+
+## Home [/]
+
+The home page.
+
++ Model
+
+        {
+            "_links": {
+                "self": { "href": "/" },
+                "games": [
+                    { "href": "/chess-game/23j89nuklyedsio/" }
+                ],
+                "bot-queue": { "href": "/queue/bot" },
+                "human-queue": { "href": "/queue/human" }
+            }
+        }
+
+### Read homepage [GET]
++ Response 200 (application/hal+json)
+
+    [Home][]
+
+
+# Group Chess Game
+
+## Chess Game [/chess-game/23j89nuklyedsio/]
+
+A chess game.
+
++ Model
+
+        {
+            "current-state" : "tag:chess.mogsie.com,2001:game-in-progress",
+            "data" : {
+                "board" : "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+            },
+            "recent-events" : [
+                {
+                    "type" : "work-completed",
+                    "name": "make-a-move",
+                    "data": {
+                        "move" : "e4"
+                    }
+                }
+            ],
+            "_links": {
+                "curies" :  [
+                    {
+                        "name": "workflow",
+                        "href": "http://TBD/{rel}",
+                        "templated": true
+                    }
+                ],
+                "workflow:make-decisions": {
+                    "href": "/chess-game/23j89nuklyedsio/make-decisions"
+                }
+            }
+        }
+
+### Retrieve game status [GET]
++ Response 200 (application/vnd.mogsie.workflow.decisions+json)
+
+    [Chess Game][]
+
+## Decisions [/chess-game/23j89nuklyedsio/make-decisions]
+
+The decisions a client needs to make for a game.
+
+### Make game decisions [POST]
++ Request (application/vnd.mogsie.workflow.decisions+json)
+
+    + Body
+
+            {
+                "current-state" : "tag:chess.mogsie.com,2001:game-in-progress",
+                "data" : {
+                    "board" : "rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1"
+                },
+                "decisions": [
+                    {
+                        "type": "schedule-work",
+                        "name": "make-a-move",
+                        "queue": "bots",
+                        "work": {
+                            "type": "http://mogsie.com/static/workflow/make-chess-move",
+                            "input": {
+                                "board" : "rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1",
+                                "legal-moves" : [ "a5", "a6", "b5", "b6", "c5", "c6" ]
+                            }
+                        }
+                    }
+                ]
+            }
+
++ Response 201
+
+# Group Queues
+
+## Queue [/queues/{id}]
+
+Retrieve the next work-order from the queue. May be expanded in the future to contain a collection of work orders.
+
++ Model
+
+        {
+            "type": "http://mogsie.com/static/workflow/make-chess-move",
+            "input": {
+                "board" : "rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1",
+                "legal-moves" : [ "a5", "a6", "b5", "b6", "c5", "c6" ]
+            },
+            "complete": "/work-orders/7d7e587b-9d8c-48bd-bdec-35e0707f173f"
+        }
+
+### Get a work order [GET]
++ Response 200 (application/vnd.mogsie.work-order+json)
+
+    [Queue][]
+
+## Work Orders [/work-orders/{id}]
+
+### Complete a work order [POST]
++ Request (application/x-www-form-urlencoded)
+
+        move=b5
+
++ Response 200
+
