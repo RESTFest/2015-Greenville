@@ -49,6 +49,8 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Pet'
+            x-links:
+              - addPet
         default:
           description: unexpected error
           schema:
@@ -75,7 +77,7 @@ paths:
   /pets/{id}:
     get:
       description: Returns a user based on a single ID, if the user does not have access to the pet
-      operationId: find pet by id
+      operationId: getPetById
       parameters:
         - name: id
           in: path
@@ -109,6 +111,7 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
+
 definitions:
   Pet:
     allOf:
@@ -119,6 +122,13 @@ definitions:
           id:
             type: integer
             format: int64
+    x-links:
+      - deletePet:
+          properties:
+            petId: id
+      - getPetById:
+          properties:
+            petId: id
 
   NewPet:
     required:
