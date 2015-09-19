@@ -1,0 +1,17 @@
+{
+  "type": "http://mogsie.com/static/workflow/make-chess-move",
+  "input": {
+    "legal-moves" : [ 
+      "b4",  "Na4",  "Nb5",  "Nd5",  "Ne4",  "Nd1",  "Nb1",  "a3",  "a4",
+      "Ba3",  "d3",  "d4",  "e3",  "e4",  "f3",  "f4",  "g3",  "g4",
+      "h3",  "h4",  "Rb1",  "Qd1",  "Qb1",  "Kd1",  "Nf3",  "Nh3"
+    ],
+    "transformations": {
+      "b4" : [ { "from":"b3", "to":"b4" } ],
+      "Na4" : [ { "from":"c3", "to":"a4" } ]
+    },
+    "board": "r3kbnr/pbpp1ppp/1pn2q2/4p3/8/1PN5/PBPPPPPP/R1Q1KBNR w KQkq - 6 7"
+  },
+
+  "complete": "/work-orders/31789abc/completed"
+}
