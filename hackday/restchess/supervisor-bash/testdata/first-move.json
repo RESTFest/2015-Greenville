@@ -1,0 +1,23 @@
+{
+  "_links": {
+    "workflow:make-decisions": {
+      "href": "/games/7ebb9142-3015-469e-b41a-a59b8825cee8/make-decisions"
+    },
+    "self": {
+      "href": "/games/7ebb9142-3015-469e-b41a-a59b8825cee8"
+    }
+  },
+  "data": {
+    "recent-events": [
+      {
+        "data": {
+          "move": "e4"
+        },
+        "name": "make-a-move",
+        "type": "work-completed"
+      }
+    ],
+    "board": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  },
+  "current-state": "tag:chess.mogsie.com,2001:game-in-progress"
+}
