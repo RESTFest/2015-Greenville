@@ -1,0 +1,16 @@
+{
+  "name": "smartbot",
+  "version": "0.0.1",
+  "description": "A hybrid bash/nodejs implementation of a smart chess playing robot as per restchess.",
+  "author": {
+    "name": "Erik Mogensen",
+    "email": "erik@mogensoft.net"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "chess"
+  ],
+  "dependencies": {
+    "chess.js": "0.9.1"
+  }
+}
